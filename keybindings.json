@@ -1,0 +1,38 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+alt+`",
+        "command": "workbench.action.createTerminalEditor",
+        "when": "terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+alt+/",
+        "command": "workbench.action.terminal.newWithCwd",
+        "when": "terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+alt+\\",
+        "command": "workbench.action.createTerminalEditorSide",
+        "when": "terminalProcessSupported"
+    },
+    {
+        "key": "` up",
+        "command": "workbench.action.terminal.moveToEditor",
+        "when": "terminalHasBeenCreated && terminalIsOpen || terminalIsOpen && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+/",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "shift+alt+/",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalHasBeenCreated || terminalIsOpen || terminalProcessSupported"
+    }
+]

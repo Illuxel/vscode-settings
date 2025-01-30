@@ -1,0 +1,205 @@
+{
+    // Telemetry
+    "telemetry.telemetryLevel": "off",
+    "redhat.telemetry.enabled": false,
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "python.analysis.reportExtraTelemetry": false,
+    "editor.experimental.treeSitterTelemetry": false,
+    // Security
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    // Sync
+    "settingsSync.keybindingsPerPlatform": false,
+    // Editor
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "problems.defaultViewMode": "table",
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnPaste": true,
+    "editor.foldingMaximumRegions": 10000,
+    "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "window.openWithoutArgumentsInNewWindow": "off",
+    "window.newWindowProfile": "Default",
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+    "notebook.lineNumbers": "on",
+    "output.smartScroll.enabled": false,
+    "debug.onTaskErrors": "showErrors",
+    "oneDarkPro.vivid": true,
+    "material-icon-theme.files.color": "#90a4ae",
+    // Terminal
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.gpuAcceleration": "on",
+    // File
+    "files.autoSave": "onWindowChange",
+    "files.enableTrash": true,
+    "files.defaultLanguage": "${activeEditorLanguage}",
+    "files.associations": {
+        "*.{c,h}": "c",
+        "*.{c,h,cpp,hpp}": "cpp",
+        "CMakeLists.txt": "cmake",
+        "*.py": "python",
+        "*.java": "java",
+        "*.cs": "csharp",
+        ".clangd": "yaml",
+        ".clang-format": "yaml",
+        ".clang-tidy": "yaml"
+    },
+    // Workbench
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.showTabs": "none",
+    "workbench.activityBar.location": "top",
+    "workbench.startupEditor": "none",
+    "workbench.panel.showLabels": false,
+    "workbench.editorAssociations": {
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+        "{git,gitlens,git-graph}:/**/*.csv": "default",
+        "{git,gitlens,git-graph}:/**/*.md": "vscode.markdown.preview.editor",
+        "{git,gitlens,git-graph}:/**/*.svg": "imagePreview.previewEditor",
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "files.autoSave",
+        "files.autoSaveDelay",
+        "files.autoSaveWorkspaceFilesOnly",
+        "terminal.integrated.suggest.enabled",
+        "terminal.integrated.defaultProfile.windows",
+        "python.terminal.shellIntegration.enabled",
+        "oneDarkPro.vivid"
+    ],
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
+    // Extensions
+    "extensions.autoUpdate": true,
+    // Markdown
+    "[markdown][markdown-math][markdown_latex_combined]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    },
+    // C/C++ 
+    "cppref.lang": "en",
+    "C_Cpp.vcpkg.enabled": true,
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.formatting": "disabled",
+    "clangd.path": "clangd",
+    "clangd.enableCodeCompletion": true,
+    "clangd.detectExtensionConflicts": true,
+    "clangd.checkUpdates": true,
+    "clangd.onConfigChanged": "restart",
+    "clangd.arguments": [
+        "--background-index=true",
+        "--background-index-priority=normal",
+        "--all-scopes-completion=true",
+        "--function-arg-placeholders=true",
+        "--header-insertion=iwyu",
+        "--header-insertion-decorators=true",
+        "--limit-references=5000",
+        "--limit-results=250",
+        "--rename-file-limit=0",
+        "--completion-style=bundled",
+        "--enable-config=true",
+        "--j=14",
+        "--pch-storage=memory",
+        "--log=error",
+    ],
+    "cmake.languageSupport.enableFileAPI": true,
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "cmake.enableAutomaticKitScan": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "[c][cpp]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.wordBasedSuggestions": "off",
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+    },
+    "[cmake][cmake-cache]": {
+        "editor.defaultFormatter": "ms-vscode.cmake-tools",
+    },
+    // C#
+    "omnisharp.autoStart": true,
+    "omnisharp.sdkVersion": "6.0.428",
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    // Java
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    // Python
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.fixAll": [
+        "source.unusedImports"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/.cache": true,
+            "**/.coverage": true,
+            "**/.coverage.*": true,
+            "**/.hypothesis": true,
+            "**/.mypy_cache": true,
+            "**/.nox": true,
+            "**/.pytest_cache": true,
+            "**/.ruff_cache": true,
+            "**/.tox": true
+        },
+    },
+    // Shaders
+    "[glsl][hlsl]": {
+        "editor.defaultFormatter": "raczzalan.webgl-glsl-editor",
+    },
+    // Powershell
+    "[powershell]": {
+        "editor.defaultFormatter": "ms-vscode.powershell",
+        "editor.semanticHighlighting.enabled": false,
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+        "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    },
+    // INI
+    // YAML
+    "yaml.validate": true,
+    "yaml.completion": true,
+    "yaml.format.enable": true,
+    "yaml.schemaStore.url": "https://www.schemastore.org/api/json/catalog.json",
+    "yaml.schemaStore.enable": true,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.insertSpaces": true,
+        "editor.defaultColorDecorators": "auto",
+        "diffEditor.ignoreTrimWhitespace": false,
+    },
+    // JSON
+    "json.validate.enable": true,
+    "json.schemaDownload.enable": true,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                ".clang-format",
+                "/.clang-format",
+                "**/.clang-format"
+            ],
+            "url": "https://json.schemastore.org/clang-format.json"
+        }
+    ],
+    "[json][jsonc][jsonl]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.quickSuggestions": {
+            "strings": true
+        }
+    }
+}
