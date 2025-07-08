@@ -1,1 +1,85 @@
-{}
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Shell | Build File (Debug)",
+            "type": "shell",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "clang++",
+            "windows": {
+                "args": [
+                    "-std=c++17",
+                    "-g",
+                    "-O0",
+                    "${file}",
+                    "-o",
+                    "a.exe"
+                ]
+            },
+            "linux": {
+                "args": [
+                    "-fcolor-diagnostics",
+                    "-fansi-escape-codes",
+                    "-std=c++17",
+                    "-g",
+                    "-O0",
+                    "${file}",
+                    "-o",
+                    "a"
+                ]
+            }
+        },
+        {
+            "label": "Shell | Build File (Release)",
+            "type": "shell",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "clang++",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-std=c++17",
+                "-O3",
+                "${file}",
+                "-o",
+                "${fileDirname}/a.exe"
+            ]
+        },
+        {
+            "label": "Shell | Build",
+            "type": "shell",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": ".\\build.bat",
+            },
+            "linux": {
+                "command": "make",
+            },
+        },
+        {
+            "label": "Shell | Clean",
+            "type": "shell",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": ".\\clean.bat",
+            },
+            "linux": {
+                "command": "make",
+                "args": [
+                    "clean"
+                ]
+            }
+        }
+    ]
+}

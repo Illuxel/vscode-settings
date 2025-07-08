@@ -1,0 +1,164 @@
+[
+  {
+    "name": "CL (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Ninja"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "CL (VS CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 17 2022"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "Clang (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Ninja"
+    },
+    "compilers": {
+      "C": "clang.exe",
+      "CXX": "clang++.exe"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "Clang (VS CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 17 2022"
+    },
+    "compilers": {
+      "C": "clang.exe",
+      "CXX": "clang++.exe"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "ClangCL (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Ninja"
+    },
+    "compilers": {
+      "C": "clang-cl.exe",
+      "CXX": "clang-cl.exe"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "ClangCL (VS CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 17 2022",
+      "toolset": "ClangCL"
+    },
+    "compilers": {
+      "C": "clang-cl.exe",
+      "CXX": "clang-cl.exe"
+    },
+    "isTrusted": true
+  },
+  {
+    "name": "vcpkg CL (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 17 2022",
+      "platform": "x64",
+      "toolset": "host=x64"
+    },
+    "isTrusted": true,
+    "toolchainFile": "${env:VCPKG_PATH}/scripts/buildsystems/vcpkg.cmake"
+  },
+  {
+    "name": "vcpkg ClangCL (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Ninja"
+    },
+    "compilers": {
+      "C": "clang-cl.exe",
+      "CXX": "clang-cl.exe"
+    },
+    "isTrusted": true,
+    "toolchainFile": "${env:VCPKG_PATH}/scripts/buildsystems/vcpkg.cmake"
+  },
+  {
+    "name": "Qt CL (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 17 2022",
+      "platform": "x64",
+      "toolset": "host=x64"
+    },
+    "isTrusted": true,
+    "cmakeSettings": {
+      "QT_HOST_PATH": "${env:QT_PATH}/msvc2022_64",
+      "QT_QML_GENERATE_QMLLS_INI": "ON"
+    },
+    "environmentVariables": {
+      "VSCODE_QT_INSTALLATION": "${env:QT_ROOT}",
+      "PATH": "${env:QT_PATH}/msvc2022_64/bin;${env:PATH}"
+    },
+    "toolchainFile": "${env:QT_PATH}/msvc2022_64/lib/cmake/Qt6/qt.toolchain.cmake"
+  },
+  {
+    "name": "Qt ClangCL (Ninja CLI)",
+    "visualStudio": "ac874f7a",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Ninja"
+    },
+    "compilers": {
+      "C": "clang-cl.exe",
+      "CXX": "clang-cl.exe"
+    },
+    "isTrusted": true,
+    "cmakeSettings": {
+      "VSCODE_QT_INSTALLATION": "${env:QT_ROOT}",
+      "QT_QML_GENERATE_QMLLS_INI": "ON"
+    },
+    "environmentVariables": {
+      "VSCODE_QT_INSTALLATION": "${env:QT_PATH}/msvc2022_64",
+      "PATH": "${env:QT_PATH};${env:QT_PATH}/msvc2022_64/bin;${env:PATH}"
+    },
+    "toolchainFile": "${env:QT_PATH}/msvc2022_64/lib/cmake/Qt6/qt.toolchain.cmake"
+  },
+  {
+    "name": "Qt Clang Android All (Ninja CLI)",
+    "preferredGenerator": {
+      "name": "Ninja"
+    },
+    "isTrusted": true,
+    "cmakeSettings": {
+      "CMAKE_CXX_FLAGS_DEBUG_INIT": "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG",
+      "CMAKE_CXX_FLAGS_RELWITHDEBINFO_INIT": "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG",
+      "QT_HOST_PATH": "${env:QT_PATH}/msvc2022_64",
+      "QT_QML_GENERATE_QMLLS_INI": "ON",
+      "QT_ANDROID_ABIS": "arm64-v8a;x86_64",
+      "QT_PATH_ANDROID_ABI_arm64-v8a": "${env:QT_PATH}/android_arm64_v8a",
+      "QT_PATH_ANDROID_ABI_x86_64": "${env:QT_PATH}/android_x86_64",
+      "ANDROID_SDK_ROOT": "${env:ANDROID_HOME}",
+      "ANDROID_NDK_ROOT": "${env:ANDROID_HOME}/ndk/26.1.10909125"
+    },
+    "environmentVariables": {
+      "VSCODE_QT_INSTALLATION": "${env:QT_ROOT}",
+      "PATH": "${env:QT_PATH};${env:PATH}"
+    },
+    "toolchainFile": "${env:QT_PATH}/android_arm64_v8a/lib/cmake/Qt6/qt.toolchain.cmake"
+  }
+]
